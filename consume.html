@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>1. Consume</title>
+</head>
+<body>
+  <video></video>
+  <script src="http://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+  <script>
+    // Your code should go here
+    // Reminders on the task:
+    //   1. Use the Remeeting API and wiki at https://bitbucket.org/remeeting/mrp-api/wiki and https://api-dev.remeeting.com/v0.3
+      //      a. Authorization - user authentication and resource authorization is done via a token that is sent as a header.
+      //         To get you started the test user's token is  nGVhDpbr2wjs8FgsecMXHpdJ .
+    //      b. To access resources, in this case a user's meetings, you could use command-line tool as follows:
+    //         curl -H "Content-Type: application/json" -H "Authorization: Bearer nGVhDpbr2wjs8FgsecMXHpdJ" https://api-dev.remeeting.com/v0.3/meeting/
+    //   2. Find the quiz user's oldest meeting and get a presigned S3 url for audio_stereo.m4a
+    //      - Don't try to read and understand all of the docs, that'd be overwhelming!
+    //          The important parts are 'Endpoints and HTTP Verbs - Get /{resource}/' which will help you get the oldest meeting,
+    //        and 'Access to S3 data resources - Get /{resource}/data/$resid/$path' which will help you get the s3 presigned url
+    //   3. Use a html5 video element on this page to play the audio_stereo.m4a
+    //
+    // Important Note: This isn't meant to be a trick question, or a stumbling block. If the API docs are confusing,
+    //  assume it is on us. Please reach out to us via email with questions, and we'll respond with answers or schedule
+    //  time to talk through your questions.
+  </script>
+</body>
+</html>
