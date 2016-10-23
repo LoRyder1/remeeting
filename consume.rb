@@ -37,8 +37,8 @@ meetingurl = "https://api-dev.remeeting.com/v0.3/meeting/"
 audiourl = "https://api-dev.remeeting.com/v0.3/audio/"
 ad = "https://api-dev.remeeting.com/v0.3/audio/data/a"
 
-s3 = "https://api-dev.remeeting.com/v0.3/audio/data/d/sw_4547_downmixed_audio_stereo.m4a/"
-# s3 = "https://api-dev.remeeting.com/v0.3/meeting/data/d/sw_4547_downmixed.xml/"
+# s3 = "https://api-dev.remeeting.com/v0.3/audio/data/d/sw_4547_downmixed_audio_stereo.m4a/"
+s3 = "https://api-dev.remeeting.com/v0.3/meeting/data/d/sw_4547_downmixed_audio_stereo.m4a/"
 
 
 user = "Bearer nGVhDpbr2wjs8FgsecMXHpdJ"
@@ -54,28 +54,18 @@ body = response.body
 my_hash = JSON.parse(body)
 
 # use access token
-pp my_hash
-# pp my_hash["Meetings"][0]
+# pp my_hash["location"]
 
-# p my_hash["Meetings"]
-# pp my_hash["Meetings"][0]
+my_hash
+s3_signed_url = my_hash["location"]
 
-# times = []
-# my_hash["Meetings"].each do |meeting|
-#   datetime = meeting["MeetingDateTime"]
-#   times << datetime
-#   # p DateTime.parse(datetime)
-# end
+# p s3_signed_url
 
+s3_file = HTTParty.get(s3_signed_url, :headers => {"Content-Type" => "binary/octet-stream"} )
+body2 = s3_file.body
 
-# pp times
-# p times.sort
-# p times.max
-# p times.min
-
-# # p my_hash["Meetings"][0]["MeetingDateTime"]
-
-# # puts response.body, response.code, response.message, response.headers.inspect
+p body2
+p s3_file.headers
 
 
 
