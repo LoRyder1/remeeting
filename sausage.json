@@ -1,0 +1,292 @@
+// A sausage is a data structure that is the output format from remeeting's automatic speach recognition system. For
+// each segment of time, possible words/phrases are given with a weight between 0.0 - 1.0. The higher the weight,
+// the more likely that word was said by the speaker.
+[
+  {
+    "speakerId": "abc", // This first one is a simple test example. Running this through your function should return "I like you"
+    "start": 0,
+    "end": 3.14,
+    "data": [
+      {
+        "start": 0,
+        "end": 1.2,
+        "words": {
+          "I": 0.6, // The value of key is the calculated likelyhood that key is the correct word
+          "hi": 0.4
+        }
+      },
+      {
+        "start": 1.2,
+        "end": 2.1,
+        "words": {
+          "like": 0.4,
+          "lick": 0.3,
+          "lake": 0.2,
+          "hike": 0.1
+        }
+      },
+      {
+        "start": 1.2,
+        "end": 3.1,
+        "words": {
+          "you": 1.0,
+          "hue": 0.0,
+          "lew": 0.0
+        }
+      }
+    ]
+  },
+  {
+    "speakerId": "def",
+    "start": 10.14,
+    "end": 18.02,
+    "data": [
+      {
+        "start": 0.55,
+        "end": 0.77,
+        "words": {
+          "yeah": 1
+        }
+      },
+      {
+        "start": 0.75,
+        "end": 1.00,
+        "words": {
+          "it's": 1.00,
+          "<eps>": 0.00,
+          "it": 0.00
+        }
+      },
+      {
+        "start": 0.98,
+        "end": 1.08,
+        "words": {
+          "a": 0.71,
+          "<eps>": 0.22,
+          "uh": 0.07,
+          "the": 0.00,
+          "it": 0.00,
+          "ah": 0.00,
+          "it's": 0.00,
+          "its": 0.00,
+          "<unk>": 0.00
+        }
+      },
+      {
+        "start": 1.06,
+        "end": 1.30,
+        "words": {
+          "it's": 1
+        }
+      },
+      {
+        "start": 1.28,
+        "end": 1.36,
+        "words": {
+          "a": 0.82,
+          "<eps>": 0.12,
+          "uh": 0.04,
+          "like": 0.02,
+          "it's": 0.00
+        }
+      },
+      {
+        "start": 1.34,
+        "end": 1.61,
+        "words": {
+          "going": 0.76,
+          "growing": 0.19,
+          "green": 0.04,
+          "great": 0.01,
+          "again": 0.00,
+          "game": 0.00,
+          "grand": 0.00,
+          "<eps>": 0.00,
+          "gun": 0.00,
+          "guy": 0.00,
+          "good": 0.00,
+          "current": 0.00,
+          "grain": 0.00,
+          "i'm": 0.00,
+          "garden": 0.00
+        }
+      },
+      {
+        "start": 1.59,
+        "end": 1.86,
+        "words": {
+          "great": 0.78,
+          "grass": 0.09,
+          "grapes": 0.09,
+          "grudge": 0.03,
+          "grits": 0.00,
+          "grace": 0.00,
+          "chris": 0.00,
+          "gross": 0.00,
+          "grade": 0.00,
+          "grates": 0.00,
+          "grants": 0.00,
+          "grips": 0.00,
+          "greats": 0.00,
+          "groups": 0.00,
+          "grate": 0.00
+        }
+      },
+      {
+        "start": 1.84,
+        "end": 1.99,
+        "words": {
+          "for": 1.00,
+          "rest": 0.00
+        }
+      },
+      {
+        "start": 1.96,
+        "end": 2.27,
+        "words": {
+          "us": 1.00,
+          "<eps>": 0.00
+        }
+      },
+      {
+        "start": 2.24,
+        "end": 2.42,
+        "words": {
+          "we": 1
+        }
+      },
+      {
+        "start": 2.40,
+        "end": 2.66,
+        "words": {
+          "had": 1
+        }
+      },
+      {
+        "start": 2.63,
+        "end": 2.82,
+        "words": {
+          "this": 0.97,
+          "some": 0.02,
+          "just": 0.00,
+          "a": 0.00
+        }
+      },
+      {
+        "start": 2.79,
+        "end": 3.12,
+        "words": {
+          "um": 0.61,
+          "i'm": 0.39,
+          "<eps>": 0.00,
+          "i": 0.00,
+          "<unk>": 0.00,
+          "and": 0.00
+        }
+      },
+      {
+        "start": 3.10,
+        "end": 3.23,
+        "words": {
+          "i'm": 1.00,
+          "i": 0.00,
+          "<eps>": 0.00
+        }
+      },
+      {
+        "start": 3.21,
+        "end": 3.57,
+        "words": {
+          "actually": 1
+        }
+      },
+      {
+        "start": 3.55,
+        "end": 3.81,
+        "words": {
+          "just": 1
+        }
+      },
+      {
+        "start": 3.78,
+        "end": 4.28,
+        "words": {
+          "recovering": 1
+        }
+      },
+      {
+        "start": 4.25,
+        "end": 4.41,
+        "words": {
+          "from": 1
+        }
+      },
+      {
+        "start": 4.38,
+        "end": 4.52,
+        "words": {
+          "the": 1
+        }
+      },
+      {
+        "start": 4.50,
+        "end": 4.72,
+        "words": {
+          "flu": 0.95,
+          "flue": 0.03,
+          "flew": 0.01,
+          "suing": 0.01,
+          "slew": 0.00
+        }
+      },
+      {
+        "start": 4.75,
+        "end": 5.42,
+        "words": {
+          "unfortunately": 0.65,
+          "fortunately": 0.35
+        }
+      },
+      {
+        "start": 5.70,
+        "end": 5.96,
+        "words": {
+          "both": 0.99,
+          "those": 0.01,
+          "most": 0.00,
+          "go": 0.00
+        }
+      },
+      {
+        "start": 5.94,
+        "end": 6.12,
+        "words": {
+          "are": 0.90,
+          "our": 0.05,
+          "art": 0.03,
+          "aren't": 0.02
+        }
+      },
+      {
+        "start": 6.09,
+        "end": 6.25,
+        "words": {
+          "in": 0.96,
+          "neighbor": 0.03,
+          "than": 0.00,
+          "our": 0.00,
+          "and": 0.00
+        }
+      },
+      {
+        "start": 6.23,
+        "end": 6.72,
+        "words": {
+          "iraq": 0.97,
+          "out": 0.03,
+          "neighbor": 0.00
+        }
+      }
+    ]
+  }
+]
