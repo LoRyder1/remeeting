@@ -29,7 +29,6 @@ class ConsumeController < ApplicationController
         min_data, min_time = meeting["AssociatedAudios"], meeting["MeetingDateTime"]
       end
     end
-
     # can not find meeting data for key: 9 which is the oldest meeting
     # default = d
     # audios = "https://api-dev.remeeting.com/v0.3/meeting/data/" + min_data[0] + "/"
