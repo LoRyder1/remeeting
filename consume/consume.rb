@@ -1,13 +1,9 @@
-
-
 # 1. Consume
 
 # As a Remeeting front-end developer, you'll be consuming the Remeeting API, along with third party API's, on a daily basis. Your task is to update the consume.html page so that it finds the quiz user's oldest meeting, and plays its audio_stereo.m4a in an html5 video element.
 # The following resources should help you get started.
 # API wiki
 # consume.html
-
-
 
 require 'httparty'
 require 'json'
@@ -49,11 +45,6 @@ class ConsumeController < ApplicationController
 
     @loc = s3_presigned_url["location"]
   end
-
-  
-
-
-
 end
 
 
