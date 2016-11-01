@@ -1,9 +1,20 @@
 
-$.getJSON("https://api-dev.remeeting.com/v0.3/", function(result) {
-  console.log(result)
+$.ajax({
+  url: "https://api-dev.remeeting.com/v0.3/meeting/",
+  dataType: 'json',
+  headers: {
+    'Authorization': 'Bearer nGVhDpbr2wjs8FgsecMXHpdJ'
+  },
+  contentType: 'application/json',
+  success: function(result) {
+    console.log(result)
+  },
+  error: function(error) {
+    console.log("FAIL")
+  }
 });
 
-
+// curl -H "Content-Type: application/json" -H "Authorization: Bearer nGVhDpbr2wjs8FgsecMXHpdJ" https://api-dev.remeeting.com/v0.3/meeting/
 
 
 // $.getJSON("http://api.themoviedb.org/2.1/Movie.search/en/json/23afca60ebf72f8d88cdcae2c4f31866/" + film + "?callback=?", function(json) {
